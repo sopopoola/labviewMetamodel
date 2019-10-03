@@ -1,0 +1,12 @@
+https://github.com/ni/webvi-examples   
+https://github.com/henslewm/NXG_library 
+https://github.com/ni/labview-nxg-jenkins-build 
+https://github.com/rajsite/webvihack 
+https://github.com/prestwick/customizing-webvis 
+https://github.com/therinoy/LabVIEW-NXG-BL1.1W-Web-App-Project 
+https://github.com/navinsubramani/develop-and-deploy-WebVI 
+https://github.com/wimtormans/LabVIEWRaspberryPI_IndoorMonitoring 
+https://github.com/eyesonvis/niweek2019-webVI-hands-on 
+https://github.com/doczhivago/DownloadUploadAFileWebVI 
+https://github.com/JKISoftware/JKI-State-Machine-NXG 
+https://github.com/JKISoftware/OpenG-NXG 
