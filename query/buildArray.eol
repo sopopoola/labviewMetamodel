@@ -1,0 +1,10 @@
+var i=0;
+var j=0;
+for (t in WhileLoop.allInstances){
+ //if (t.Wait == null){
+ if (t.BuildArray.size>0){
+ 		i=i+1;
+ }
+ j=j+1;
+}
+return i +"  test  "+j;
