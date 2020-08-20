@@ -1,1 +1,19 @@
-return Terminal.allInstances.size;
+var x = 0;
+var me:Set;
+for (i in Model.allInstances){
+  if (i.isKindOf(NodeLabel)){
+    var t= Model.allInstances.select(t:DataAccessor| t.Label==i.AttachedTo);
+    if(t.size>0){
+      for(j in i.`p.Text`){
+        if(me.includes(j)){
+          x=x+1;
+        }
+        else{
+          me.add(j);
+        }
+       }
+      }
+
+   }
+}
+return x;
