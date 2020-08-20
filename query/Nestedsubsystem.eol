@@ -1,0 +1,14 @@
+var x=0;
+for (i in MethodCall.allInstances){
+var name=i.Target;
+var back= '\\\\';
+var nm =name.replace(back,"");
+for (j in BlockDiagram.allInstances.select(t|t.file == nm)){
+if (j.MethodCall.size>0){
+x=x+1;
+}
+}
+}
+for (i in BlockDiagram.allInstances){
+}
+return x;

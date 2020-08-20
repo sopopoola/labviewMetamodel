@@ -1,0 +1,7 @@
+var x=0;
+for (i in WhileLoop.allInstances){
+if(i.WhileLoop.size>0 or i.ForLoop.size>0){
+x=x+1;
+}
+}
+return x;
