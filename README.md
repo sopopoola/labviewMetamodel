@@ -5,3 +5,8 @@
 5) Scripts/VersionEOLQueryEngine provides high level query support for smells. The function "saveModelN" can generate all the EMF models that has been indexex in Hawk over the lifecycle of the repositories. The function should also generate the changes btween successive versions
 6) The folder queries contain the query scripts for each smells.
 7) labview.ecore is the labview metamodel. You will need this when running the extended hawk for LabVIEW NXG
+
+References
+[1] Hawk- https://www.eclipse.org/hawk/
+[2] EMFCompare- https://www.eclipse.org/emf/compare/
+[3] LabVIEW NXG- https://www.ni.com/en-us/shop/labview/labview-nxg.html
