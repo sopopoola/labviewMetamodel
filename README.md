@@ -7,6 +7,9 @@
 7) labview.ecore is the labview metamodel. You will need this when running the extended hawk for LabVIEW NXG
 
 References
+
 [1] Hawk- https://www.eclipse.org/hawk/
+
 [2] EMFCompare- https://www.eclipse.org/emf/compare/
+
 [3] LabVIEW NXG- https://www.ni.com/en-us/shop/labview/labview-nxg.html
