@@ -3,5 +3,31 @@ for (i in WhileLoop.allInstances){
 if(i.ConcatenateStrings.size>0){
 x=x+1;
 }
+else{
+x=x+getRecursiveString(i);
+}
 }
 return x;
+
+// recursive function to check for ConcatenateStrings
+operation getRecursiveString(element:Any): Integer{
+// check if the element as any children (containment references)
+if (Model.getChildren(self).size()<1){
+return 0;
+}
+//check if the element has a Concatenate String
+else if (element.ConcatenateStrings.size()>0){
+return 1;
+}
+else{
+// recursively go through element's children and see if it has a ConcatenateStrings
+for (j in Model.getChildren(self)){
+	if(getRecursiveString(element)==1){
+		return 1;
+	}
+}
+
+//return 0 if none of the children has a ConcatenateStrings
+return 0;
+}
+}

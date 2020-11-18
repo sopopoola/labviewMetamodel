@@ -2,8 +2,34 @@ var i=0;
 var j=0;
 for (t in WhileLoop.allInstances){
  if (t.Wait.size>0){
- 		i=i+1;
+ 		continue;
+ }
+ else{
+ i= i+getRecursiveWait(t);
  }
  j=j+1;
 }
 return i +"  test  "+j;
+
+// recursive function to check for Wait
+operation getRecursiveWait(element:Any): Integer{
+// check if the element as any children (containment references)
+if (Model.getChildren(self).size()<1){
+return 1;
+}
+//check if the element has a Wait
+else if (element.Wait.size()>0){
+return 0;
+}
+else{
+// recursively go through element's children and see if it has a Wait
+for (j in Model.getChildren(self)){
+	if(getRecursiveWait(j)==0){
+		return 0;
+	}
+}
+
+//return 1 if none of the children has a Wait
+return 	1;
+}
+}
