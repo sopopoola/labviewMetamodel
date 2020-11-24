@@ -9,6 +9,5 @@ x=x+1;
 }
 }
 }
-for (i in BlockDiagram.allInstances){
-}
+
 return x;
