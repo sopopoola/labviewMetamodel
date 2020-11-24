@@ -132,6 +132,29 @@ public class VersionEOLQueryEngine extends TimeAwareEOLQueryEngine{
 		} 
 		return allContents;
 	}
+	public Collection<?> getChildren(Object iNode) {
+		Collection results = new HashSet<>();
+		if (iNode instanceof GraphNodeWrapper) {
+			GraphNodeWrapper gnw = (GraphNodeWrapper) iNode;
+			IGraphNode node = gnw.getNode();
+			
+			for (IGraphEdge edge : node.getOutgoing()) {
+				if ( edge.getProperty("isContainment") != null) {
+					results.add(new GraphNodeWrapper(edge.getEndNode(), this));
+				}
+			}
+			
+			for (IGraphEdge edge : node.getIncoming()) {
+				//Object property= edge.getProperty("isContainer");
+				if (edge.getProperty("isContainer") != null) {
+					results.add(new GraphNodeWrapper(edge.getStartNode(), this));
+					//System.out.println("my input  "+ property);
+				}
+			}
+			
+		}	
+		return results;
+	}
 	public Collection<?> getVersion(int i){
 		Collection<Long> collect = getAllInstants();
 		if (collect.isEmpty()) {
